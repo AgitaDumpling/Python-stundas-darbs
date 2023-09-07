@@ -43,4 +43,13 @@ def ceturtais(teksts, n ):
 
 ceturtais("pynative",4)
 
-def piektais():
+def piektais(saraksts):
+    print("Dotais saraksts:", saraksts)
+    print("Result is", saraksts[0] == saraksts[-1])
+    return
+
+skaitli1 = [10, 20, 30, 40, 10]
+skaitli2 = [75, 65, 35, 75, 30]
+
+piektais(skaitli2)
+
