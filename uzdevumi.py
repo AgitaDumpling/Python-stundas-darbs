@@ -61,5 +61,50 @@ def sestais(saraksts):
             print (elements)
         return
 
-skaitli = [4, 65, 32, 88]    
-sestais(skaitli)    
+#skaitli = [4, 65, 32, 88]    
+#sestais(skaitli)    
+
+def astotais(n):
+    for i in range(1,n+1): #no 1 līdz n i mainīs vērtību
+        for j in range (i):
+            print(i, end=" ")
+        print()
+
+#astotais(8)
+
+def devitais(skaitlis):
+    teksta_forma = str(skaitlis)
+    for i in range(len(teksta_forma)):
+        if teksta_forma[i]!=teksta_forma[-1-i]:
+            print("nav palindroms")
+            return
+    print("ir palidroms")
+    return
+
+#devitais(4566654)
+
+def desmitais(saraksts1, saraksts2):
+    jaunais_saraksts = []
+    for elements in saraksts1:
+        if elements % 2 == 0:
+            jaunais_saraksts.append(elements)
+    for elements in saraksts2:
+        if elements % 2 == 1:
+            jaunais_saraksts.append(elements)
+        print("pirmais saraksts:", saraksts1)    
+        print("otrais saraksts:", saraksts2) 
+        print("apvienotais saraksts:", jaunais_saraksts)   
+        return
+
+#sar1 = [13, 65, 97, 10, 34]  
+#sar2 = [13, 61, 87, 11, 38]   
+#desmitais(sar1, sar2)
+
+def pedejais(n):
+    for i in range(n, 0, -1):
+        for j in range (i):
+            print("*", end = " ")
+        print()
+    return
+
+pedejais(5)
