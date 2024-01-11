@@ -107,4 +107,5 @@ def pedejais(n):
         print()
     return
 
-pedejais(5)
+#pedejais(5)
+
