@@ -98,6 +98,13 @@ def datu_parbaude (gads_dz, menesis_dz, datums_dz, gads_sis, menesis_sis, datums
        print("Nepareizi ievades dati!")
     return pareizi_dati
 
+def ievadīta_nepareiza_atbilde(sis_gads, sis_menesis, sis_datums, si_diena, dz_gads, dz_menesis, dz_datums):
+    while True:
+        user_input = input(sis_gads, sis_menesis, sis_datums, si_diena, dz_gads, dz_menesis, dz_datums).replace(",", "")
+        try:
+            return int(user_input)
+        except ValueError:
+            print("Nepareizi ievadīdi dati.")
 
 atbilde = "y"
 while atbilde == "y":
@@ -111,3 +118,4 @@ while atbilde == "y":
   if datu_parbaude(dz_g, dz_m, dz_d, sis_g, sis_m, sis_d, sis_n):
    print(dienas_mekletajs(sis_g, sis_m, sis_d, sis_n, dz_g, dz_m, dz_d))
   atbilde = input("Vai mēģināt velreiz? ('y'/'n')")
+
