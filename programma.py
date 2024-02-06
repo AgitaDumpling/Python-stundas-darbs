@@ -46,5 +46,5 @@ vardi = []
 for cilveks in visi:
     info = cilveks.split("")
     vardi.append(info[0])
-
+    vecums1 = (info[3].rsplit(","))
 print(vardi)
