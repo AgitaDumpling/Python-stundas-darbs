@@ -23,12 +23,26 @@ class Cilvēks:
     def nopelnit(self, nopelnita_nauda):
         self.nauda += nopelnita_nauda
 
+    def uztaisit_spamu(self, spama_mape):
+        faila_nosaukums = spama_mape + "spams" + self.name + str(self.age) + ".txt"
+        sveiki_galotne = "a"
+        laimets_galotne = "usi"
+        laimets = self.age*35
+        teksts = "Sveika{}(-a/-s/-i), {}(Vārds)! Tu esi laimēj{}(-usi/-is) {}(vecums*35)!".format(sveiki_galotne, self.name, laimets_galotne, laimets)
+        with open(faila_nosaukums, "w", encoding="utf-8") as spams:
+            spams.write(teksts) 
+        self.nopelnit(laimets)
+        self.pastastit_par_sevi()
+
+
+
 persona1 = Cilvēks("Marta", 32, "s")
 persona1.pastastit_par_sevi()
 persona1.dzimsanas_diena()
 persona1.pastastit_par_sevi()
 persona1.nopelnit(30)
 persona1.pastastit_par_sevi()
+persona1.uztaisit_spamu("oop/spams/spams")
 
 #turpinat = "t"
 #Cilveki = []
