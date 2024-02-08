@@ -34,8 +34,9 @@ class Cilvēks:
         else:
             sveiki_galotne = "i"
             laimets_galotne = "is"
+
         laimets = self.age*35
-        teksts = "Sveika{}(-a/-s/-i), {}(Vārds)! Tu esi laimēj{}(-usi/-is) {}(vecums*35)!".format(sveiki_galotne, self.name, laimets_galotne, laimets)
+        teksts = "Sveik{}, {}! Tu esi laimēj{} {}€!".format(sveiki_galotne, self.name, laimets_galotne, laimets)
         with open(faila_nosaukums, "w", encoding="utf-8") as spams:
             spams.write(teksts) 
         self.nopelnit(laimets)
