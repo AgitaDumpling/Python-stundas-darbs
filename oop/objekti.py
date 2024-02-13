@@ -52,6 +52,7 @@ persona1.nopelnit(30)
 persona1.pastastit_par_sevi()
 persona1.uztaisit_spamu("oop/spams/")
 
+#jaizņem  no komets un sis jāsataisa
 #turpinat = "t"
 #Cilveki = []
 #while turpinat == "t":
